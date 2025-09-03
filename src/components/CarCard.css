@@ -1,0 +1,62 @@
+.car-card {
+  position: relative;
+  background: rgba(30, 20, 40, 0.95);
+  color: #f5f5f5;
+  border: 2px solid gold;
+  border-radius: 15px;
+  padding: 16px;
+  text-align: center;
+  width: 280px;
+  margin: 16px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  font-family: Georgia, serif;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-15px) scale(1.05) rotateZ(1deg);
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.9), 0 0 15px rgba(0, 255, 255, 0.7);
+  filter: drop-shadow(0 0 15px cyan) drop-shadow(0 0 10px purple);
+}
+
+.car-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.car-title {
+  color: gold;
+  margin-bottom: 8px;
+}
+
+.car-description {
+  font-style: italic;
+}
+
+/* частицы */
+.car-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.car-particle-0 { background: cyan;    top: 15%; left: 25%; animation: float0 3s infinite ease-in-out; }
+.car-particle-1 { background: gold;    top: 45%; left: 75%; animation: float1 3s infinite ease-in-out; }
+.car-particle-2 { background: cyan;    top: 70%; left: 20%; animation: float2 3s infinite ease-in-out; }
+.car-particle-3 { background: magenta; top: 30%; left: 10%; animation: float3 3s infinite ease-in-out; }
+.car-particle-4 { background: gold;    top: 60%; left: 55%; animation: float4 3s infinite ease-in-out; }
+.car-particle-5 { background: cyan;    top: 12%; left: 80%; animation: float5 3s infinite ease-in-out; }
+
+/* анимации */
+@keyframes float0 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+@keyframes float1 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+@keyframes float2 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);} }
+@keyframes float3 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-15px);} }
+@keyframes float4 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+@keyframes float5 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }

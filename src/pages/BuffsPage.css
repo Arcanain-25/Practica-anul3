@@ -1,0 +1,12 @@
+.buffs-page {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a001a, #1a002e, #000000);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px 40px;
+  justify-items: center;
+  align-items: start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}

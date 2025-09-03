@@ -1,0 +1,65 @@
+.search-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #0a001a, #1a002e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.search-input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ff69b4;
+  width: 320px;
+  outline: none;
+  margin-bottom: 20px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: cyan;
+  box-shadow: 0 0 8px cyan;
+}
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px 35px;
+  width: 100%; /* растягиваем на весь экран */
+  padding: 20px 40px;
+  justify-items: center;
+  box-sizing: border-box;
+}
+
+.search-card {
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.search-card:hover {
+  transform: scale(1.03);
+}
+
+.no-results {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.search-card {
+  padding: 5px;
+  opacity: 0;               /* начальная прозрачность */
+  transform: translateY(20px); /* немного смещаем вниз */
+  animation: fadeIn 0.4s forwards; /* анимация появления */
+  transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
