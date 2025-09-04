@@ -1,0 +1,62 @@
+.car-card {
+  width: 240px;
+  aspect-ratio: 2.5 / 3.5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 3px solid var(--card-border-color, #fff);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении */
+.car-card:hover {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 0 15px var(--card-border-color, #fff),
+              0 0 30px var(--card-border-color, #fff);
+}
+
+/* Картинка */
+.car-card img {
+  height: 40%;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Контент */
+.car-content {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Заголовок */
+.car-content h3 {
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Статы */
+.car-stats {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.car-stats p {
+  margin: 3px 0;
+}
+
+/* Описание */
+.description {
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.85;
+  text-align: center;
+}
