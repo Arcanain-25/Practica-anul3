@@ -1,0 +1,84 @@
+.car-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  width: 280px;
+  overflow: hidden;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.car-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.car-card:hover .car-image {
+  transform: scale(1.05);
+}
+
+.car-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.car-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.car-year-fuel {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+.car-details {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-top: 10px;
+}
+
+.book-now {
+  margin-top: 14px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6c5ce7, #8e7dff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.book-now:hover {
+  background: linear-gradient(135deg, #5b4cc7, #7c6bff);
+  transform: translateY(-2px);
+}

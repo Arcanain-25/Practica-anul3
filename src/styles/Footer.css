@@ -1,0 +1,47 @@
+.footer {
+  background: #0a0a0f; /* темный фон киберпанка */
+  color: #00ffff;
+  padding: 40px 20px;
+  font-size: 14px;
+  border-top: 1px solid #222;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ff00ff;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
+}
+
+.footer-column p {
+  margin: 4px 0;
+  color: #00ffff;
+  text-shadow: 0 0 2px #00ffff, 0 0 5px #ff00ff;
+  transition: color 0.3s ease;
+}
+
+.footer-column p:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-columns {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+}

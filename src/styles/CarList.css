@@ -1,0 +1,129 @@
+/* Сетка карточек */
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 0 20px;
+}
+
+/* Карточка машины */
+.car-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #0a0a0f, #1a1a30);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Neon border glow */
+.car-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(60deg, #00ffff, #6c5ce7, #ff00ff, #00ffff);
+  filter: blur(20px);
+  opacity: 0.5;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  animation: neonShift 6s linear infinite;
+}
+
+.car-card:hover::before {
+  opacity: 0.9;
+}
+
+/* Neon gradient animation */
+@keyframes neonShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Изображение машины */
+.car-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #00ffff;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.car-card:hover img {
+  transform: scale(1.1) rotate(-1deg);
+  filter: brightness(1.2) contrast(1.1);
+}
+
+/* Информация о машине */
+.car-card-details {
+  position: relative;
+  z-index: 1;
+  padding: 18px 20px; /* чуть больше, чтобы текст не «прилипал» */
+  background: rgb(245, 242, 242); /* более тёмный фон для читаемости */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #00ffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 20px 20px; /* чтобы соответствовало карточке */
+}
+
+.car-card-details h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ff00ff;
+  text-shadow: 0 0 6px #ff00ff, 0 0 14px #00ffff, 0 0 20px #000000; /* усилен контраст */
+}
+
+.car-card-details p {
+  font-size: 0.95rem;
+  color: #00ffff;
+  text-shadow: 0 0 4px #00ffff, 0 0 6px #000000; /* добавлено чёрное смягчение для читаемости */
+}
+
+.car-card-details .price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6c5ce7;
+  text-shadow: 0 0 6px #6c5ce7, 0 0 14px #00ffff, 0 0 20px #000000; /* усилен контраст */
+}
+
+
+/* Кнопка действий */
+.show-more-btn {
+  margin-top: 12px;
+  background: linear-gradient(135deg, #6c5ce7, #00ffff);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(108, 92, 231, 0.5), 0 6px 18px rgba(0, 255, 255, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+}
+
+.show-more-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 28px rgba(108, 92, 231, 0.7), 0 10px 28px rgba(0, 255, 255, 0.7);
+  background: linear-gradient(135deg, #ff00ff, #00ffff);
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .car-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .car-grid {
+    grid-template-columns: 1fr;
+  }
+}  
